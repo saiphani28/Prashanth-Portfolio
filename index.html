@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prashanth M. — Writer & Director</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;600;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fcfbf8;--fg:#1c1917;--mute:#78716c;--line:#e7e2da;--card:#f4f1ea;--accent:#b4531f;--sans:"Bricolage Grotesque",system-ui,sans-serif;--serif:"Instrument Serif",Georgia,serif;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#13100e;--fg:#f5f0e8;--mute:#a8a29e;--line:#2b2622;--card:#1d1916;--accent:#f0a561;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#13100e;--fg:#f5f0e8;--mute:#a8a29e;--line:#2b2622;--card:#1d1916;--accent:#f0a561;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 1rem/1.65 var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}img{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.bar{position:fixed;left:0;top:0;height:3px;width:100%;z-index:100;background:var(--accent);transform:scaleX(0);transform-origin:0 50%}
+nav{position:fixed;top:0;left:0;right:0;z-index:80;display:flex;justify-content:space-between;align-items:center;padding:calc(env(safe-area-inset-top,0px) + 14px) clamp(18px,4vw,48px) 14px;color:#fcfbf8;transition:background .35s,color .35s,box-shadow .35s;font-size:.92rem}
+nav.solid{background:color-mix(in srgb,var(--bg) 88%,transparent);color:var(--fg);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+nav b{font-weight:800;letter-spacing:-.02em;font-size:1.05rem}
+nav div{display:flex;align-items:center;gap:clamp(14px,3vw,30px)}
+nav a{text-decoration:none;opacity:.9}nav a:hover{opacity:1}
+nav button{all:unset;cursor:pointer;width:34px;height:34px;display:grid;place-items:center;border-radius:50%;border:1px solid currentColor;opacity:.8}
+nav button:focus-visible{outline:2px solid var(--accent)}
+@media(max-width:560px){nav div a:not(:last-of-type){display:none}}
+/* hero */
+.hero{position:relative;height:max(100svh,560px);overflow:hidden;background:#1a1412;isolation:isolate;color:#fcfbf8}
+@media(max-aspect-ratio:1/1){.hero{height:max(68svh,520px)}}
+.layer{position:absolute;inset:0;will-change:transform}
+.layer img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.bg{transform:translate3d(calc(var(--mx,0)*-14px),calc(var(--sy,0)*.1px),0) scale(1.1)}
+.bg img{filter:blur(4px) brightness(.6) saturate(.9)}
+.bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.3),transparent 40%,rgba(0,0,0,.5))}
+.nm{z-index:2;padding-top:20svh;transform:translate3d(calc(var(--mx,0)*28px),calc(var(--sy,0)*.32px),0)}
+.nm h1{margin:0;text-align:center;font:800 14vw/.85 var(--sans);letter-spacing:-.04em;text-transform:uppercase;white-space:nowrap}
+.nm h1 span{display:inline-block;animation:in 1.2s cubic-bezier(.2,.7,.2,1) both}
+@keyframes in{from{opacity:0;transform:translateY(12%)}}
+@media(max-aspect-ratio:1/1){.nm{padding-top:13svh}}
+.fg{z-index:3;transform:translate3d(calc(var(--mx,0)*5px),calc(var(--sy,0)*.04px),0) scale(1.1)}
+.fg img{filter:drop-shadow(0 30px 40px rgba(0,0,0,.4))}
+.meta{position:absolute;z-index:4;left:clamp(18px,4vw,48px);right:clamp(18px,4vw,48px);bottom:clamp(20px,5vh,44px);display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;text-shadow:0 2px 14px rgba(0,0,0,.5)}
+.meta p{margin:0}
+.meta .r{font:italic 400 clamp(1.3rem,2.6vw,2rem)/1.15 var(--serif);max-width:18em}
+.meta .s{font-size:.9rem;opacity:.85}
+/* sections */
+section{padding:clamp(70px,11vw,140px) clamp(18px,5vw,72px)}
+.wrap{max-width:1180px;margin:auto}
+h2{font:400 clamp(2.4rem,5.4vw,4.2rem)/1 var(--serif);margin:0 0 .5em;letter-spacing:-.01em}
+.k{color:var(--accent);font-weight:600;font-size:.9rem;margin:0 0 10px}
+.lead{font:400 clamp(1.8rem,3.6vw,2.8rem)/1.15 var(--serif);max-width:24em;margin:0 0 .8em}
+.two{display:grid;gap:clamp(24px,5vw,70px);grid-template-columns:minmax(0,1fr)}
+@media(min-width:860px){.two{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.two.rev{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center}}
+.two p{color:var(--mute);margin:0 0 1em;max-width:34em}
+.quote{font:italic 400 clamp(2.2rem,5vw,3.8rem)/1.05 var(--serif);color:var(--accent);margin:0 0 .3em}
+.poster{perspective:1000px}
+.tilt{position:relative;transition:transform .2s ease-out;box-shadow:0 30px 70px -25px rgba(0,0,0,.45);border-radius:6px;overflow:hidden}
+.tilt img{width:100%;aspect-ratio:1;object-fit:cover}
+.tilt::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at var(--px,50%) var(--py,50%),rgba(255,255,255,.2),transparent 45%);pointer-events:none}
+.row{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}
+.btn{display:inline-block;background:var(--fg);color:var(--bg);font-weight:600;text-decoration:none;padding:12px 24px;border-radius:99px;transition:transform .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn.o{background:transparent;color:var(--fg);border:1px solid var(--line)}
+.cred{font-size:.88rem;color:var(--mute)}
+.strip{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 0 18px;margin-top:44px;scrollbar-width:thin}
+.cards{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
+.card{display:block;text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;transition:transform .3s,border-color .3s}
+.card:hover{transform:translateY(-4px);border-color:var(--accent)}
+.card small{color:var(--accent);font-weight:600}
+.card h3{font:500 1.5rem/1.15 var(--serif);margin:.3em 0 .4em}
+.card p{margin:0;color:var(--mute);font-size:.92rem}
+.song{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;border-top:1px solid var(--line);text-decoration:none;transition:padding .3s,color .3s}
+.song:last-child{border-bottom:1px solid var(--line)}
+.song:hover{padding-left:14px;color:var(--accent)}
+.song b{font:500 clamp(1.5rem,3.4vw,2.4rem)/1.1 var(--serif)}
+.song span{color:var(--mute);font-size:.88rem;display:block;font-family:var(--sans)}
+.song u{text-decoration:none;font-size:.85rem;border:1px solid currentColor;border-radius:99px;padding:6px 14px;white-space:nowrap}
+.reels{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(46%,180px),1fr))}
+.reel{aspect-ratio:3/4;border-radius:12px;padding:16px;display:flex;flex-direction:column;justify-content:flex-end;gap:2px;text-decoration:none;color:#fcfbf8;background:linear-gradient(165deg,hsl(var(--h) 55% 40%),hsl(calc(var(--h) + 40) 50% 14%));transition:transform .35s}
+.reel:hover{transform:scale(1.03) rotate(-1deg)}
+.reel b{font:italic 500 1.6rem/1.1 var(--serif)}
+.reel span{font-size:.8rem;opacity:.85}
+.alt{background:var(--card)}
+.alt blockquote{font:italic 500 clamp(1.3rem,2.6vw,2rem)/1.35 var(--serif);margin:0 0 20px;max-width:30em}
+.contact{text-align:center}
+.contact h2{font-size:clamp(2.4rem,7vw,5.5rem)}
+.contact .l{display:flex;flex-direction:column;gap:4px;font:500 clamp(1.2rem,2.6vw,1.8rem) var(--serif)}
+.contact .l a{text-decoration:none}.contact .l a:hover{color:var(--accent)}
+footer{text-align:center;color:var(--mute);font-size:.85rem;padding:0 20px 30px}
+.stack>*+*{margin-top:clamp(60px,9vw,110px)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+.mq{overflow:hidden;border-block:1px solid var(--line);padding:14px 0}
+.mq div{display:flex;gap:2.4rem;width:max-content;animation:mq 32s linear infinite;font:italic 400 clamp(1.6rem,3.4vw,2.6rem) var(--serif);white-space:nowrap}
+.mq i{color:var(--accent);font-style:normal}
+@keyframes mq{to{transform:translateX(-50%)}}
+.ep{flex:0 0 clamp(230px,27vw,320px);scroll-snap-align:start;text-decoration:none;display:block}
+.ep .th{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#1a1412}
+.ep .th img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.95);transition:scale .6s}
+.ep:hover .th img{scale:1.05}.ep .th{cursor:pointer}.ep .th iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:3}.ep .th::after{pointer-events:none}
+.ep .th::after{content:"";position:absolute;inset:0;background:linear-gradient(165deg,hsl(var(--h) 60% 40%/.4),transparent 55%,rgba(0,0,0,.45))}
+.ep .pl{position:absolute;z-index:2;left:50%;top:50%;width:54px;height:54px;margin:-27px;border-radius:50%;background:rgba(252,251,248,.92);display:grid;place-items:center;transition:transform .3s}
+.ep .pl::before{content:"";border-left:16px solid #1c1917;border-block:10px solid transparent;margin-left:4px}
+.ep:hover .pl{transform:scale(1.12)}
+.ep b{display:block;font:400 1.6rem/1.1 var(--serif);margin-top:12px}
+.ep .s{font-size:.85rem;color:var(--mute)}
+.bts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:40px}
+@media(min-width:860px){.bts{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.bts .ph:nth-child(even){margin-top:56px}}
+.ph{all:unset;box-sizing:border-box;position:relative;display:block;overflow:hidden;border-radius:12px;aspect-ratio:3/4;cursor:zoom-in;background:var(--card)}
+.ph:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.ph img{position:absolute;left:0;top:-8%;width:100%;height:116%;object-fit:cover;transition:scale .6s;will-change:transform}
+.ph:hover img{scale:1.06}
+.ph span{position:absolute;left:0;right:0;bottom:0;padding:44px 14px 12px;color:#fcfbf8;font-size:.85rem;line-height:1.35;background:linear-gradient(transparent,rgba(0,0,0,.75))}
+.lb{position:fixed;inset:0;z-index:200;background:rgba(10,8,7,.94);display:grid;place-items:center;padding:20px;color:#fcfbf8}
+.lb[hidden]{display:none}
+.lb figure{margin:0;text-align:center}
+.lb img{max-height:78svh;max-width:88vw;border-radius:8px;animation:fd .3s}
+.lb figcaption{margin-top:12px;font:italic 400 1.3rem var(--serif)}
+@keyframes fd{from{opacity:0}}
+.lbb{all:unset;cursor:pointer;position:absolute;width:44px;height:44px;display:grid;place-items:center;border-radius:50%;border:1px solid rgba(255,255,255,.4);font-size:1.4rem}
+.lbb:hover{background:rgba(255,255,255,.12)}.lbb:focus-visible{outline:2px solid #fcfbf8}
+.lbb.x{top:calc(env(safe-area-inset-top,0px) + 16px);right:16px}.lbb.pv{left:12px;top:50%}.lbb.nx{right:12px;top:50%}
+</style>
+</head>
+<body>
+<div class="bar" id="bar"></div>
+<nav id="nav"><b>Prashanth M.</b><div><a href="#about">About</a><a href="#work">Work</a><a href="#bts">Behind the scenes</a><a href="#more">Songs &amp; Reels</a><a href="#contact">Contact</a><button id="th" aria-label="Toggle dark mode">◐</button></div></nav>
+
+<header class="hero" id="hero">
+  <div class="layer bg"><img src="assets/hero-bg.png" alt="Prashanth M. seated on a sofa with his hand over his mouth" fetchpriority="high"></div>
+  <div class="layer nm"><h1><span>Prashanth</span></h1></div>
+  <div class="layer fg" aria-hidden="true"><img src="assets/hero-cutout.png" alt=""></div>
+  <div class="meta"><p class="r">Writer &amp; Director. Stories rooted in people, emotions and everyday experiences.</p><p class="s">Filmmaker Portfolio | 2026</p></div>
+</header>
+<div class="mq" aria-hidden="true"><div id="mq"></div></div>
+
+<section id="about"><div class="wrap two">
+  <div><p class="k">About</p><h2 class="lead">I’m Prashanth. A filmmaker, and a storyteller at heart.</h2></div>
+  <div>
+    <p>I’ve taken stories from an idea on paper to something people can watch: directing, assisting, managing production, and occasionally fitting two days of shooting into one.</p>
+    <p>What draws me to cinema is observing people, understanding their emotions and turning everyday moments into characters, worlds and films.</p>
+    <p class="quote">“Manchi cinema chusam!”</p>
+    <p>The one feeling I want audiences to carry out of the theatre.</p>
+  </div>
+</div></section>
+
+<section id="work" class="alt"><div class="wrap">
+  <div class="two rev">
+    <div class="poster"><div class="tilt" id="tilt"><img src="assets/poster.jpg" alt="Evare Nuvvu! series poster"></div></div>
+    <div>
+      <p class="k">Featured work · 2026</p>
+      <h2>Evare Nuvvu!</h2>
+      <p style="color:var(--fg);font-weight:600;margin-bottom:.6em">Telugu romantic comedy-drama · 6 episodes<br>Written &amp; directed by Prashanth</p>
+      <p class="lead" style="font-size:1.5rem">What happens when someone knows your story before you’ve even met them?</p>
+      <p>Manasa, a cheerful Zumba trainer, already knows something about Gautham, a cynical IT professional, that he doesn’t know about her. As her past surfaces, the series explores respect, consent, trust and loyalty.</p>
+      <div class="row"><a class="btn" href="https://youtu.be/4kaqF4xB5MA?si=yIesBFDd_mcFgyOk" target="_blank" rel="noopener">Watch trailer</a><a class="btn o" href="https://youtu.be/gdkmvU2FjWM?si=4u0dAffQDc759pba" target="_blank" rel="noopener">Full series cut</a></div>
+      <p class="cred">Mohit Pedada &amp; Manasa Kancharla · Infinitum Media · Produced by Vandana Bandaru</p>
+    </div>
+  </div>
+  <div class="strip" id="strip" aria-label="Episodes"></div>
+</div></section>
+
+<section id="bts"><div class="wrap">
+  <p class="k">Behind the scenes</p><h2>Where the story gets made</h2>
+  <div class="bts" id="bts-grid"></div>
+</div></section>
+
+<section><div class="wrap stack">
+  <div>
+    <p class="k">Experience</p><h2>Associate Director &amp; Writer</h2>
+    <div class="cards">
+      <a class="card" href="https://youtu.be/R6MFc6ZQ68A?si=bdxlDzJmmTRlAuF5" target="_blank" rel="noopener"><small>2023 · Associate Director</small><h3>Nenu Naa Nakshatra</h3><p>Watch the official trailer ↗</p></a>
+      <a class="card" href="https://youtu.be/puM_oAStpm4?si=uNjjq9ik6P1i2R3w" target="_blank" rel="noopener"><small>2026 · Writer</small><h3>Raghuvaran – Middle Class Abbayi</h3><p>Watch on YouTube ↗</p></a>
+    </div>
+  </div>
+  <div id="more">
+    <p class="k">Lyricist</p><h2>Songs</h2>
+    <div>
+      <a class="song" href="https://open.spotify.com/album/2sC5ThzGiox75DzfS1lmoN?si=IJIP_pXNRGW-GU_PzvJdYg&utm_source=copy-link" target="_blank" rel="noopener"><div><b>Hey Satyabhama</b><span>Music: Srujan · Lyrics: Prashanth</span></div><u>Spotify</u></a>
+      <a class="song" href="https://youtu.be/vNNHLC3-cfw?si=WUD9osnjym7Zt9Pb" target="_blank" rel="noopener"><div><b>Sare Sare</b><span>Music: Srujan · Lyrics: Prashanth</span></div><u>YouTube</u></a>
+    </div>
+  </div>
+  <div>
+    <p class="k">Short-form · Instagram</p><h2>Reels</h2>
+    <div class="reels" id="reels"></div>
+  </div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <p class="k">In development</p><h2>Feature film</h2>
+  <blockquote>A young man’s journey through school days, college crushes, one-sided love and unexpected struggles, until somewhere between chasing love and figuring out life, he loses himself and has to find his way back to his dreams.</blockquote>
+  <p class="cred">Coming-of-age romantic drama · Written by Prashanth M.</p>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap">
+  <h2>Let’s create something meaningful.</h2>
+  <div class="l"><a href="mailto:prashanthnarratives@gmail.com">prashanthnarratives@gmail.com</a><a href="tel:+917989284435">7989284435</a><a href="https://www.instagram.com/prashanthandyou?xtok=YW45eWhzNXFpOTVr&utm_source=qr" target="_blank" rel="noopener">@prashanthandyou</a></div>
+</div></section>
+<footer>© 2026 Prashanth M.</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+  <button class="lbb x" id="lbx" aria-label="Close">✕</button><button class="lbb pv" id="lbp" aria-label="Previous photo">‹</button>
+  <figure><img id="lbi" alt=""><figcaption id="lbc"></figcaption></figure><button class="lbb nx" id="lbn" aria-label="Next photo">›</button>
+</div>
+<script>
+const $=s=>document.querySelector(s),RM=matchMedia('(prefers-reduced-motion:reduce)').matches,R=document.documentElement;
+const eps=['https://youtu.be/ZsmxOlzhDZ8?si=Jy2BYcikTYYpANfS','https://youtu.be/mgSrM5nAZ1s?si=B43O11pdEZET7BcQ','https://youtu.be/kk9nLFkGaZ0?si=lN6zspzav19SLRAh','https://youtu.be/hzW8UsNzatI?si=AKzbFWUWgvx20VBb','https://youtu.be/KEdisCVcKIc?si=l-aGv-YQpJ-48kG2','https://youtu.be/rtnCfdfznus?si=Vb03zK6ki5UoFFGR'];
+$('#strip').innerHTML=eps.map((u,i)=>`<a class="ep" href="${u}" target="_blank" rel="noopener" style="--h:${345+i*12}"><b>${i+1}</b><span>Episode ${i+1}<br>Evare Nuvvu!</span></a>`).join('');
+const rl=[['Emo','Reel','https://www.instagram.com/reel/DNccVwLzTi2/?dlrf=MWJpNXZpMDg5N3owdw=='],['Unemployed','Part 1','https://www.instagram.com/reel/DTUFFcQj_Pl/?mdxt=Z3BpMXY2YnZkbjk1'],['Unemployed','Part 2','https://www.instagram.com/reel/DUaw8bTD91F/?obrf=M2Y0NnYxbjBpcnA0'],['Now or Never','Reel','https://www.instagram.com/reel/DdycARpyPnl/?obrf=MXZraDd0bDQxNjUzbA==']];
+$('#reels').innerHTML=rl.map((r,i)=>`<a class="reel" href="${r[2]}" target="_blank" rel="noopener" style="--h:${[350,20,30,300][i]}"><span>${r[1]}</span><b>${r[0]}</b><span>Watch on Instagram ↗</span></a>`).join('');
+// theme
+try{const t=localStorage.getItem('th');if(t)R.dataset.theme=t}catch(e){}
+$('#th').onclick=()=>{const d=R.dataset.theme?R.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;R.dataset.theme=d?'light':'dark';try{localStorage.setItem('th',R.dataset.theme)}catch(e){}};
+const mqw=['Writer','Director','Associate Director','Lyricist','Storyteller'].map(w=>`<span>${w}</span><i>✦</i>`).join('');$('#mq').innerHTML=mqw+mqw;
+const yid=u=>u.match(/youtu\.be\/([\w-]+)/)[1];
+$('#strip').innerHTML=eps.map((u,i)=>{const id=yid(u);return `<div class="ep"><div class="th" role="button" tabindex="0" data-id="${id}" aria-label="Play Episode ${i+1}"><img src="https://i.ytimg.com/vi/${id}/maxresdefault.jpg" alt="Episode ${i+1} thumbnail" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/${id}/mqdefault.jpg'"><span class="pl"></span></div><b>Episode ${i+1}</b><a class="s" href="${u}" target="_blank" rel="noopener">Open on YouTube ↗</a></div>`}).join('');
+function play(t){const b=t.closest('.th');if(!b||b.querySelector('iframe'))return;b.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${b.dataset.id}?autoplay=1&rel=0" title="Evare Nuvvu episode player" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`}
+$('#strip').addEventListener('click',e=>play(e.target));
+$('#strip').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();play(e.target)}});
+const bts=[['assets/bts-1.jpg','Colour grading Episode 4 in DaVinci Resolve'],['assets/bts-2.jpg','Cutting Episode 2 in Premiere Pro'],['assets/bts-3.jpg','On set with the Sony FX3'],['assets/bts-4.jpg','Reviewing the graded frame']];
+$('#bts-grid').innerHTML=bts.map((b,i)=>`<button class="ph" data-i="${i}" aria-label="Open photo: ${b[1]}"><img src="${b[0]}" alt="${b[1]}" loading="lazy"><span>${b[1]}</span></button>`).join('');
+const phs=[...document.querySelectorAll('.ph img')],lb=$('#lb');let cur=0,last;
+function show(i){cur=(i+bts.length)%bts.length;$('#lbi').src=bts[cur][0];$('#lbi').alt=bts[cur][1];$('#lbc').textContent=bts[cur][1]}
+function openLb(i){last=document.activeElement;show(i);lb.hidden=false;document.body.style.overflow='hidden';$('#lbx').focus()}
+function closeLb(){lb.hidden=true;document.body.style.overflow='';last&&last.focus()}
+$('#bts-grid').addEventListener('click',e=>{const b=e.target.closest('.ph');if(b)openLb(+b.dataset.i)});
+$('#lbx').onclick=closeLb;$('#lbp').onclick=()=>show(cur-1);$('#lbn').onclick=()=>show(cur+1);
+lb.addEventListener('click',e=>{if(e.target===lb)closeLb()});
+addEventListener('keydown',e=>{if(lb.hidden)return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
+let sx0=0;lb.addEventListener('touchstart',e=>{sx0=e.touches[0].clientX},{passive:true});lb.addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-sx0;if(Math.abs(d)>50)show(cur+(d<0?1:-1))});
+// fit the hero name to the screen width
+function fit(){const h=$('.nm h1'),s=h.firstElementChild;h.style.fontSize='100px';h.style.fontSize=(100*innerWidth*.94/s.getBoundingClientRect().width)+'px'}
+(document.fonts?document.fonts.ready:Promise.resolve()).then(fit);addEventListener('resize',fit);fit();
+// scroll + hero parallax
+let tx=0,cx=0;
+function onScroll(){const y=scrollY;if(!RM)phs.forEach(im=>{const r=im.parentElement.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;im.style.transform=`translateY(${((r.top+r.height/2)/innerHeight-.5)*-34}px)`});$('#nav').classList.toggle('solid',y>innerHeight*.6);
+  $('#bar').style.transform=`scaleX(${y/Math.max(1,R.scrollHeight-innerHeight)})`;
+  if(!RM&&y<innerHeight*1.2)$('#hero').style.setProperty('--sy',y)}
+addEventListener('scroll',()=>requestAnimationFrame(onScroll),{passive:true});onScroll();
+if(!RM){addEventListener('pointermove',e=>{tx=e.clientX/innerWidth-.5});
+ (function f(){cx+=(tx-cx)*.07;$('#hero').style.setProperty('--mx',cx.toFixed(4));requestAnimationFrame(f)})()}
+// poster tilt
+const t=$('#tilt');
+t.addEventListener('pointermove',e=>{if(RM)return;const r=t.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;t.style.transform=`rotateY(${(x-.5)*12}deg) rotateX(${(.5-y)*12}deg)`;t.style.setProperty('--px',x*100+'%');t.style.setProperty('--py',y*100+'%')});
+t.addEventListener('pointerleave',()=>t.style.transform='');
+</script>
+</body>
+</html>
