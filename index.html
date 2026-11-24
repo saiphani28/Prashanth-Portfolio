@@ -138,10 +138,13 @@ footer{text-align:center;color:var(--mute);font-size:.85rem;padding:0 20px 30px}
 <section id="about"><div class="wrap two">
   <div><p class="k">About</p><h2 class="lead">I’m Prashanth. A filmmaker, and a storyteller at heart.</h2></div>
   <div>
-    <p>I’ve taken stories from an idea on paper to something people can watch: directing, assisting, managing production, and occasionally fitting two days of shooting into one.</p>
-    <p>What draws me to cinema is observing people, understanding their emotions and turning everyday moments into characters, worlds and films.</p>
+    <p>I’ve been part of bringing stories from an idea on paper to something people can watch.</p>
+    <p> From writing and assisting with direction to managing shoots and figuring out how to get things done when plans don’t go as expected, no two experiences have been the same.</p>
+    <p> And yes, sometimes two days of shooting have to happen in one!</p>
+    <p> What I enjoy most about filmmaking is observing people, their conversations, emotions and everyday experiences, and finding stories in them.</p>
+    <p> I want to turn those little observations into characters and stories that feel real, relatable and worth watching.</p>
     <p class="quote">“Manchi cinema chusam!”</p>
-    <p>The one feeling I want audiences to carry out of the theatre.</p>
+    <p> That’s the kind of feeling I hope my films leave behind.</p>
   </div>
 </div></section>
 
@@ -153,7 +156,9 @@ footer{text-align:center;color:var(--mute);font-size:.85rem;padding:0 20px 30px}
       <h2>Evare Nuvvu!</h2>
       <p style="color:var(--fg);font-weight:600;margin-bottom:.6em">Telugu romantic comedy-drama · 6 episodes<br>Written &amp; directed by Prashanth</p>
       <p class="lead" style="font-size:1.5rem">What happens when someone knows your story before you’ve even met them?</p>
-      <p>Manasa, a cheerful Zumba trainer, already knows something about Gautham, a cynical IT professional, that he doesn’t know about her. As her past surfaces, the series explores respect, consent, trust and loyalty.</p>
+      <p> Gautham is an IT professional who has his own way of looking at life, while Manasa is a cheerful Zumba trainer who seems to bring energy wherever she goes. When their paths cross, things aren’t quite as simple as they appear. Manasa knows more about Gautham than he could imagine, and there’s a reason behind the distance she maintains.</p>
+      <p> As their stories unfold, hidden connections, unexpected turns and complicated relationships bring questions of trust, respect, consent and loyalty to the surface.</p>
+      <p> A light-hearted romantic comedy with an emotional side, Evare Nuvvu! explores how much we really know about the people we meet, and how the past can shape the relationships we build.</p>
       <div class="row"><a class="btn" href="https://youtu.be/4kaqF4xB5MA?si=yIesBFDd_mcFgyOk" target="_blank" rel="noopener">Watch trailer</a><a class="btn o" href="https://youtu.be/gdkmvU2FjWM?si=4u0dAffQDc759pba" target="_blank" rel="noopener">Full series cut</a></div>
       <p class="cred">Mohit Pedada &amp; Manasa Kancharla · Infinitum Media · Produced by Vandana Bandaru</p>
     </div>
@@ -218,7 +223,7 @@ $('#strip').innerHTML=eps.map((u,i)=>{const id=yid(u);return `<div class="ep"><d
 function play(t){const b=t.closest('.th');if(!b||b.querySelector('iframe'))return;b.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${b.dataset.id}?autoplay=1&rel=0" title="Evare Nuvvu episode player" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`}
 $('#strip').addEventListener('click',e=>play(e.target));
 $('#strip').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();play(e.target)}});
-const bts=[['assets/bts-1.jpg','Colour grading Episode 4 in DaVinci Resolve'],['assets/bts-2.jpg','Cutting Episode 2 in Premiere Pro'],['assets/bts-3.jpg','On set with the Sony FX3'],['assets/bts-4.jpg','Reviewing the graded frame']];
+const bts=[['assets/bts-1.jpg','Colour grading Episode 4 in DaVinci Resolve'],['assets/bts-2.jpg','Cutting Episode 2 in Premiere Pro'],['assets/bts-3.jpg','Reviewing the graded frame'],['assets/bts-4.jpg','On set with the Sony FX3']];
 $('#bts-grid').innerHTML=bts.map((b,i)=>`<button class="ph" data-i="${i}" aria-label="Open photo: ${b[1]}"><img src="${b[0]}" alt="${b[1]}" loading="lazy"><span>${b[1]}</span></button>`).join('');
 const phs=[...document.querySelectorAll('.ph img')],lb=$('#lb');let cur=0,last;
 function show(i){cur=(i+bts.length)%bts.length;$('#lbi').src=bts[cur][0];$('#lbi').alt=bts[cur][1];$('#lbc').textContent=bts[cur][1]}
